@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cookie Delight</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1606312619344-f72e4c918b6e');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .cookie-card {
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .cookie-card:hover {
+      transform: scale(1.05);
+    }
+
+    .cookie-card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .cookie-name {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+
+    .price {
+      color: #b8860b;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background-color: #ff9900;
+      color: white;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background-color: #e68a00;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Welcome to Courage Cookie 🍪</h1>
+    <div class="menu">
+      <div class="cookie-card">
+        <img src="images.jpg" alt="Chocolate Chip Cookie">
+        <div class="cookie-name">Chocolate Chip</div>
+        <div class="price">$2.00</div>
+        <button onclick="addToCart('Chocolate Chip')">Add to Cart</button>
+      </div>
+      <div class="cookie-card">
+        <img src="jcyyyyyyyy.jpg" alt=" Cookie">
+        <div class="cookie-name">Liberia Cookie</div>
+        <div class="price">$1.80</div>
+        <button onclick="addToCart('Liberia Cookie')">Add to Cart</button>
+      </div>
+      <div class="cookie-card">
+        <img src="download 66666666.jpg" alt="Peanut Butter Cookie">
+        <div class="cookie-name">Peanut Cookie</div>
+        <div class="price">$2.20</div>
+        <button onclick="addToCart('Peanut Cookie')">Add to Cart</button>
+      </div>
+      <button class="buy-btn" onclick="buyCookie('Courage Cookie')">Buy Now</button>
+    </div>
+  </div>
+
+  <script>
+    function addToCart(cookieName) {
+      alert(cookieName + ' has been added to your cart!');
+    }
+    function buyCookie(cookieName) {
+      alert("You have bought: " + cookieName + " 🍪");
+    }
+
+    function toggleInfo(btn) {
+      const info = btn.nextElementSibling;
+      if (info && info.classList.contains("extra-info")) {
+        info.style.display = info.style.display === "block" ? "none" : "block";
+      }
+    }
+  </script>
+</body>
+</html>

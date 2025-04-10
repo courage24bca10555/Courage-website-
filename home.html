@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cookie Courage - Home</title>
+  <link rel="stylesheet" href="home.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffaf3;
+      color: #333;
+    }
+
+    header {
+      background-color: #d2691e;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #a0522d;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffddaa;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      background: linear-gradient(to right, #ffe5b4, #fff5e6);
+    }
+
+    .hero img {
+      max-width: 400px;
+      border-radius: 20px;
+      margin: 20px;
+    }
+
+    .hero-text {
+      max-width: 500px;
+      margin: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .hero-text a {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #d2691e;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .hero-text a:hover {
+      background-color: #a0522d;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #f5deb3;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+    /* === Slideshow Styles === */
+.slideshow {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #fff5e6;
+}
+
+.slideshow h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #a0522d;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 12px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.fade {
+  animation: fade 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Courage Cookies</h1>
+    <p>Freshly Baked Happiness in Every Bite 🍪</p>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <section class="hero">
+    <img src="cou.jpg" alt="Cookies Display">
+    <div class="hero-text">
+      <h1>Indulge in Courage Cookie</h1>
+      <p>At Courage Cookies, we bake with heart and soul. From gooey chocolate chips to rich oatmeal raisin, our cookies are handcrafted with love using the finest ingredients. Treat yourself to a warm cookie today!</p>
+      <a href="menu.html">Explore Our Menu</a>
+    </div>
+  </section>
+  <section class="slideshow">
+    <h2>Our Cookie Gallery</h2>
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="images.jpg" alt="Cookie 1">
+      </div>
+      <div class="slide fade">
+        <img src="download 66666666.jpg" alt="Cookie 2">
+      </div>
+      <div class="slide fade">
+        <img src="jcyyyyyyyy.jpg" alt="Cookie 3">
+      </div>
+  
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </section>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      const slides = document.getElementsByClassName("slide");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+    
+    function plusSlides(n) {
+      slideIndex += n - 1;
+      showSlides();
+    }
+    </script>
+    
+
+  <footer>
+    &copy; 2025 Courage Cookie. All rights reserved.
+  </footer>
+
+</body>
+</html>
